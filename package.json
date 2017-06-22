@@ -1,7 +1,7 @@
 {
   "name": "findlocalparking",
   "version": "0.1.0",
-  "main": "main.js",
+  "main": "server.js",
   "engines": {
     "node": "6.6.0",
     "npm": "3.10.8"
