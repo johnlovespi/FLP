@@ -1,27 +1,41 @@
 {
   "name": "findlocalparking",
   "version": "0.1.0",
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "engines": {
+    "node": "6.6.0",
+    "npm": "3.10.8"
+  },
   "private": true,
   "devDependencies": {
     "react-native-scripts": "0.0.31",
     "jest-expo": "~1.0.1",
     "react-test-renderer": "16.0.0-alpha.6"
   },
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "start": "react-native-scripts start",
+    "start": "node server.js",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js --watch"
+    "ios": "npm run ios-build && npm run ios-launch-sim || npm run ios-install-app && npm run ios-launch-installed",
+    "test": "node node_modules/jest/bin/jest.js --watch",
+    "ios-build": "xcodebuild  -project ios/YourAppName.xcodeproj -scheme YourAppName -sdk iphonesimulator -destination platform='iOS Simulator',name='iPhone 6 Plus' -derivedDataPath ios/build",
+    "ios-launch-sim": "xcrun instruments -w 'iPhone 5s (9.2)'",
+    "ios-install-app": "xcrun simctl install booted ios/build/Build/Products/Debug-iphonesimulator/YourAppName.app",
+    "ios-launch-installed": "xcrun simctl launch booted org.yourcompany.YourAppName",
+    "heroku-prebuild": "bash ./scripts/deployment_react.sh",
+    "heroku-postbuild": "bash ./scripts/deployment_cleanup.sh"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@expo/vector-icons": "~4.0.0",
+    "base-64": "0.1.0",
+    "dotenv": "^4.0.0",
     "expo": "^17.0.0",
-    "react": "16.0.0-alpha.6",
-    "react-native": "^0.44.0"
+    "react": "^15.4.0",
+    "react-native": "^0.44.0",
+    "react-native-maps": "^0.15.2"
   },
   "description": "This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).",
   "author": "JOHNESPINOZA",
