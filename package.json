@@ -1,5 +1,5 @@
 {
-  "name": "AwesomeProject",
+  "name": "findlocalparking",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -22,5 +22,16 @@
     "expo": "^17.0.0",
     "react": "16.0.0-alpha.6",
     "react-native": "^0.44.0"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).",
+  "author": "JOHNESPINOZA",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/johnlovespi/FLP.git"
+  },
+  "bugs": {
+    "url": "https://github.com/johnlovespi/FLP/issues"
+  },
+  "homepage": "https://github.com/johnlovespi/FLP#readme"
 }
