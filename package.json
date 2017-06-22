@@ -1,16 +1,17 @@
 {
   "name": "findlocalparking",
   "version": "0.1.0",
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "main": "main.js",
   "engines": {
     "node": "6.6.0",
     "npm": "3.10.8"
   },
   "private": true,
   "devDependencies": {
-    "react-native-scripts": "0.0.31",
-    "jest-expo": "~1.0.1",
-    "react-test-renderer": "16.0.0-alpha.6"
+    "babel-jest": "18.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "jest": "18.1.0",
+    "react-test-renderer": "15.4.2"
   },
   "scripts": {
     "start": "node server.js",
@@ -34,8 +35,11 @@
     "dotenv": "^4.0.0",
     "expo": "^17.0.0",
     "react": "^15.4.0",
-    "react-native": "^0.44.0",
-    "react-native-maps": "^0.15.2"
+    "react-native": "github:exponent/react-native#sdk-14.0.0",
+    "react-native-maps": "^0.15.2",
+    "react-native-camera": "git+https://github.com/lwansbrough/react-native-camera.git",
+    "react-native-fetch-blob": "^0.10.5",
+    "react-native-fs": "2.1.0-rc.1"
   },
   "description": "This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).",
   "author": "JOHNESPINOZA",
