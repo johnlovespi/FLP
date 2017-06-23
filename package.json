@@ -11,6 +11,7 @@
     "babel-jest": "18.0.0",
     "babel-preset-react-native": "1.9.1",
     "jest": "18.1.0",
+    "react-native-schemes-manager": "^1.0.0-beta.12",
     "react-test-renderer": "15.4.2"
   },
   "scripts": {
@@ -20,7 +21,18 @@
     "ios": "npm run ios-build && npm run ios-launch-sim || npm run ios-install-app && npm run ios-launch-installed",
     "test": "node node_modules/jest/bin/jest.js --watch",
     "heroku-prebuild": "bash ./scripts/deployment_react.sh",
-    "heroku-postbuild": "bash ./scripts/deployment_cleanup.sh"
+    "heroku-postbuild": "bash ./scripts/deployment_cleanup.sh",
+    "postinstall": "react-native-schemes-manager all"
+  },
+  "xcodeSchemes": {
+    "Debug": [
+      "Staging",
+      "Preflight"
+    ],
+    "Release": [
+      "Beta"
+    ],
+    "projectDirectory": "iOS"
   },
   "jest": {
     "preset": "jest-expo"
