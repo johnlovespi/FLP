@@ -22,6 +22,7 @@
     "test": "node node_modules/jest/bin/jest.js --watch",
     "heroku-prebuild": "bash ./scripts/deployment_react.sh",
     "heroku-postbuild": "bash ./scripts/deployment_cleanup.sh",
+    "fix-xcode": "react-native-schemes-manager all",
     "postinstall": "react-native-schemes-manager all"
   },
   "xcodeSchemes": {
