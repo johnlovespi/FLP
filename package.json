@@ -19,10 +19,6 @@
     "android": "react-native-scripts android",
     "ios": "npm run ios-build && npm run ios-launch-sim || npm run ios-install-app && npm run ios-launch-installed",
     "test": "node node_modules/jest/bin/jest.js --watch",
-    "ios-build": "xcodebuild  -project ios/YourAppName.xcodeproj -scheme YourAppName -sdk iphonesimulator -destination platform='iOS Simulator',name='iPhone 6 Plus' -derivedDataPath ios/build",
-    "ios-launch-sim": "xcrun instruments -w 'iPhone 5s (9.2)'",
-    "ios-install-app": "xcrun simctl install booted ios/build/Build/Products/Debug-iphonesimulator/YourAppName.app",
-    "ios-launch-installed": "xcrun simctl launch booted org.yourcompany.YourAppName",
     "heroku-prebuild": "bash ./scripts/deployment_react.sh",
     "heroku-postbuild": "bash ./scripts/deployment_cleanup.sh"
   },
@@ -33,13 +29,12 @@
     "@expo/vector-icons": "~4.0.0",
     "base-64": "0.1.0",
     "dotenv": "^4.0.0",
-    "expo": "^17.0.0",
-    "react": "^15.4.0",
+    "expo": "~15.0.0",
+    "react": "~15.4.2",
     "react-native": "github:exponent/react-native#sdk-14.0.0",
-    "react-native-maps": "^0.15.2",
     "react-native-camera": "git+https://github.com/lwansbrough/react-native-camera.git",
     "react-native-fetch-blob": "^0.10.5",
-    "react-native-fs": "2.1.0-rc.1"
+    "sqlite3": "^3.1.8"
   },
   "description": "This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).",
   "author": "JOHNESPINOZA",

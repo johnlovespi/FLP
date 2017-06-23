@@ -8,7 +8,7 @@ import {
 
 import App from './App.js'
 
-export default class fanative extends Component {
+export default class findlocalparking extends Component {
   render() {
     return (
       <App />
@@ -35,4 +35,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('fanative', () => fanative);
+AppRegistry.registerComponent('findlocalparking', () => findlocalparking);
